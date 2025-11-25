@@ -1,6 +1,6 @@
 import random
 
-def flip_coins(num_flips: int = 50):
+def flip_coins(num_flips):
     # Use getrandbits(1) for a fast, uniform random 0/1
     heads = 0
     tails = 0
@@ -36,4 +36,9 @@ def flip_coins(num_flips: int = 50):
     print("Winner:", winner)
 
 if __name__ == "__main__":
-    flip_coins(50)  # change this number if you want more/less flips
+    while True:
+        user_input = input("Press Enter to flip the coins or specify the number of flips: ")
+        if user_input.isdigit():
+            flip_coins(int(user_input))
+        else:
+            flip_coins(100)  # default number of flips
