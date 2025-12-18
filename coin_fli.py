@@ -1,5 +1,7 @@
 import random
 
+LOGFILE = "coin_flip.log"
+
 def flip_coins(num_flips):
     # Use getrandbits(1) for a fast, uniform random 0/1
     heads = 0
